@@ -2,6 +2,7 @@
   --SLATE: #434455;
   --IRIS: #4d5ae5;
   --NAVY-BLUE: #2e2f42;
+  --NAVY-BLUE-modal: rgba(46, 47, 66, 0.4);
   --WHITE: #fff;
   --CLOUD: #f4f4fd;
   --OCEAN: #404bbf;
@@ -9,6 +10,7 @@
   --GREY: rgba(46, 47, 66, 0.7);
   --LIGHT-SLATE: #8e8f99;
   --GREEN: #31d0aa;
+  --DAIRY: #fcfcfc;
 }
 
 body {
@@ -439,4 +441,46 @@ address {
 }
 .icon-footer {
   fill: var(--CLOUD);
+}
+
+/*Modal*/
+.backdrop {
+  position: fixed;
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--NAVY-BLUE-modal);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 408px;
+  height: 100%;
+  max-height: 584px;
+  overflow-y: auto;
+  background-color: var(--DAIRY);
+  border-radius: 4px;
+  padding: 24px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0);
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
