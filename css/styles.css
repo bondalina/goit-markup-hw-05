@@ -439,11 +439,39 @@ address {
 .social-media-block {
   display: flex;
   flex-direction: column;
+  margin-right: 80px;
 }
 .icon-footer {
   fill: var(--CLOUD);
 }
+.subscribe-input {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--WHITE);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: var(--NAVY-BLUE);
+}
+.subscribe-input::placeholder {
+  color: var(--WHITE);
+  font-size: 12px;
+  line-height: 2; /* 200% */
+  letter-spacing: 0.04em;
+}
+.subscribe-button {
+  color: var(--WHITE);
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  background: var(--IRIS);
+  margin-left: 24px;
+}
 
+.subscribe-icon {
+  fill: var(--WHITE);
+}
 /*Modal*/
 .backdrop {
   position: fixed;
@@ -574,6 +602,10 @@ address {
   font-size: 12px;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
+}
+.privacy-policy {
+  color: var(--IRIS);
+  text-decoration: underline;
 }
 .modal-button {
   display: block;
