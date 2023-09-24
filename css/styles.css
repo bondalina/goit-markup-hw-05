@@ -444,33 +444,50 @@ address {
 .icon-footer {
   fill: var(--CLOUD);
 }
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .subscribe-input {
+  width: 264px;
+  height: 40;
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--WHITE);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background: var(--NAVY-BLUE);
+  background: transparent;
+  color: var(--WHITE);
+  font-size: 12px;
+  line-height: 1.5; /* 200% */
+  letter-spacing: 0.04em;
 }
 .subscribe-input::placeholder {
   color: var(--WHITE);
-  font-size: 12px;
-  line-height: 2; /* 200% */
-  letter-spacing: 0.04em;
 }
 .subscribe-button {
+  min-width: 165px;
+  height: 40px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5px; /* 150% */
+  letter-spacing: 0.04em;
   color: var(--WHITE);
-  display: inline-flex;
-  padding: 8px 24px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   border-radius: 4px;
   background: var(--IRIS);
-  margin-left: 24px;
+  cursor: pointer;
+  border: none;
 }
 
 .subscribe-icon {
   fill: var(--WHITE);
+  margin-left: 16px;
 }
 /*Modal*/
 .backdrop {
